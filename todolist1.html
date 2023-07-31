@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .inputTodolist{
+            display: flex;
+            gap: 20px;
+        }
+        .inputTodolist input{
+            width: 100%;
+            height: 30px;
+            padding: 0 20px;
+            border-radius: 5px;
+        }
+        .inputTodolist button{
+            padding: 6px 8px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+        .inputTodolist button:hover{
+            background-color: orange;
+            color: white;
+        }
+        .contentTodo{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+       .items{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            gap: 25px;
+        }
+       .items h3{
+            font-size: 1.5em;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+       .items p{
+            font-size: 1.1em;
+            font-weight: 200;
+            cursor: pointer;
+        }
+        .delete{
+            color: red;
+        }
+        .up{
+            color: greenyellow;
+        }
+        .listTodo{
+            width:250px;
+            height: 100%;
+            position: absolute;
+           top: 50px;
+           right: 10px;
+           display: flex;
+           flex-direction: column;
+        }
+        .judulContent{
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 20px;
+        }
+        .judulList{
+            position: absolute;
+            top: 0;
+            right: 50px;
+            font-size: 1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 20px;
+        }
+        @media only screen and (max-width: 780px) {
+            .judulList,.listTodo{
+                position: absolute;
+                top: 50%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            .listTodo{
+                width: 100%;
+                margin-top: 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inputTodolist">
+            <input type="text" class="valueTodo" placeholder="whats your todo?">
+            <button class="pushTodo">add</button>
+        </div>
+        <div class="contentTodo">
+            <h3 class="judulContent">content todo</h3>
+
+        </div>
+        <h3 class="judulList">history</h3>
+        <div class="listTodo">
+
+        </div>
+    </div>
+    <script src="todolist1.js"></script>
+</body>
+</html>
